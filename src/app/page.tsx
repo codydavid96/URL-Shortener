@@ -1,13 +1,19 @@
+"use client";
+
 import InputShortener from './InputShortener';
 import BackgroundAnimate from './backgroundAnimate';
 import { LinkResult } from './LinkResult';
+import {useState} from 'react'
 
 export default function App() {
+
+  const [inputValue, setInputValue] = useState("");
+
   return (
     <div className="container">
-      <InputShortener />
+      <InputShortener setInputValue={setInputValue} />
       <BackgroundAnimate />
-      <LinkResult />
+      <LinkResult inputValue={inputValue} />
     </div>
     );
 }
