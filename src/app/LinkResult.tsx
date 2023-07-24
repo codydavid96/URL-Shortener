@@ -5,7 +5,11 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 
-export const LinkResult = ({ inputValue }) => {
+interface LinkResultProps {
+  inputValue: string;
+}
+
+export const LinkResult: React.FC<LinkResultProps> = ({ inputValue }) => {
   const [shortenLink, setShortenLink] = useState("");  
   const [copied, setCopied] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -19,7 +23,7 @@ export const LinkResult = ({ inputValue }) => {
       );
       setShortenLink(res.data.result.full_short_link);
     } catch (err) {
-      seterror(err)
+      seterror(true)
     } finally {
       setLoading(false)
     }

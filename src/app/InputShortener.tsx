@@ -2,7 +2,11 @@
 
 import React, { useState } from 'react';
 
-const InputShortener = ({ setInputValue }) => {
+interface InputShortenerProps {
+  setInputValue: (value: string) => void;
+}
+
+const InputShortener: React.FC<InputShortenerProps> = ({ setInputValue }) => {
   const [value, setValue] = useState('')
   const handleClick = () => {
     setInputValue(value);
