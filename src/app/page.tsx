@@ -12,8 +12,8 @@ export default function App() {
   return (
     <div className="container">
       <InputShortener setInputValue={setInputValue} />
-      <BackgroundAnimate />
       <LinkResult inputValue={inputValue} />
+      <BackgroundAnimate />
     </div>
     );
 }

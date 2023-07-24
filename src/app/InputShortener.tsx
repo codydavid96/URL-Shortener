@@ -5,8 +5,8 @@ import React, { useState } from 'react';
 const InputShortener = ({ setInputValue }) => {
   const [value, setValue] = useState('')
   const handleClick = () => {
-    setInputValue(value)
-    setValue("")
+    setInputValue(value);
+    setValue("");
   }
   return (
     <div className='inputContainer'>

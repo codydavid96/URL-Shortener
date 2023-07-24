@@ -11,7 +11,7 @@
 @layer components {
 
   .textBox {
-    @apply flex items-center justify-center -mb-20;
+    @apply flex items-center justify-center -mb-20 -mt-10;
   };
 
   .header {
@@ -19,7 +19,7 @@
   };
 
   .result {
-    @apply flex items-center justify-center
+    @apply flex items-center justify-center -mt-48
   }
 
   .shorten-button {
@@ -30,6 +30,10 @@
   .result button {
     @apply hover:bg-gray-500 hover:border-gray-500 border-2 bg-gray-200 
     border-gray-200 p-3 hover:text-gray-200
+  }
+
+  .no-data {
+    @apply text-white text-lg flex items-center justify-center
   }
 };
 
